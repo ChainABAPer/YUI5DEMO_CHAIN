@@ -1,0 +1,45 @@
+<core:FragmentDefinition
+xmlns="sap.m"
+xmlns:core="sap.ui.core"
+xmlns:f="sap.ui.layout.form"
+>
+
+<Dialog id ="idTimelineDtDialog"
+        title="Working Experience"
+        busyIndicatorDelay="0">
+        <!-- ทำฟอร์มสำหรับกรอกข้อมูล -->
+        <f:SimpleForm id="idFormWorkExp">
+                <!-- username -->
+                <Label id="idLabelUsername" text="Username" labelFor="idTextUsername"/>
+                <Text id="idTextUsername" text="{/Timeline/Username}"/>
+                <!-- company -->
+                <Label id="idLabelCompany" text="Company" labelFor="idInputCompany"/>
+                <Input id="idInputCompany" value="{/Timeline/Company}" />
+                <!-- period start -->
+                <Label id="idLabelWorkStart" text="Work Start" />
+                <DatePicker
+                id="idDatePickWorkStart"
+                value="{/Timeline/WorkStart}"
+                valueFormat="yyyyMM"
+                displayFormat="yyyy-MM"/>
+                <!-- period end -->
+                <Label id="idLabelWorkEnd" text="Work End" />
+                <DatePicker
+                id="idDatePickWorkEnd"
+                value="{/Timeline/WorkEnd}"
+                valueFormat="yyyyMM"
+                displayFormat="yyyy-MM"/>
+                <!-- บรรยายประสบการณ์ทำงาน -->
+                <Label id="idLabelWorkExp" text="Experience" />
+                <TextArea id="idTextAreaWorkExp" value="{/Timeline/WorkExp}"/>
+
+        </f:SimpleForm>
+        <!-- เพิ่มปุ่มใน dialog -->
+        <buttons>
+                <Button id="idBtCreate" icon="sap-icon://create" type="Emphasized" text="Create" press="onCreateTimelineDt"/>
+                <Button id="idBtClose" text="Close" press="onCloseTimelineDt"/>
+        </buttons>
+
+</Dialog>
+
+</core:FragmentDefinition>

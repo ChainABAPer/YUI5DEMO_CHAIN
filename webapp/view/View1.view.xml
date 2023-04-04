@@ -1,0 +1,34 @@
+<mvc:View controllerName="yui5demokachain.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:cm="sap.suite.ui.commons">
+    <Page id="page" title="{i18n>title}">
+        <content>
+        <Toolbar id="Toolbar1">
+            <Button id="button1" text="New Timeline" press="onPress"/>
+        </Toolbar>
+            <cm:Timeline
+                    id="idTimeline"
+                    enableDoubleSided="true"
+                    groupBy="HireDate"
+                    growingThreshold="0"
+                    filterTitle="Job Title"
+                    sortOldestFirst="true"
+                    content="{/TimelineSet}">
+                <cm:content>
+                    <cm:TimelineItem
+                            id="idTemplateItem"
+                            dateTime="Date Time"
+                            title="{Company}"
+                            userNameClickable="true"
+                            userPicture="{Photo}"
+                            text="{WorkExp}"
+                            userName="{Username}"
+                            filterValue="filter value"
+                            icon="sap-icon://accounting-document-verification">
+                    </cm:TimelineItem>
+                </cm:content>
+            </cm:Timeline>
+        </content>
+    </Page>
+</mvc:View>
