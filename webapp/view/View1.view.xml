@@ -24,7 +24,7 @@
                             userPicture="{Photo}"
                             text="{WorkExp}"
                             userName="{Username}"
-                            filterValue="filter value"
+                            filterValue="test"
                             icon="sap-icon://accounting-document-verification">
                     </cm:TimelineItem>
                 </cm:content>
